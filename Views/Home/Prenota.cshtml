@@ -1,0 +1,40 @@
+@model prenota5H.Models.Utente
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<h2>Modulo di Prenotazione</h2>
+<p>Riempi il seguente Form per Registrarti</p>
+
+<form asp-controller="Home" asp-action="Prenotato" method="post">
+
+  <div class="form-group">
+    <label asp-for="Nome"></label>
+    <input type="text" asp-for="Nome" class="form-control" />
+    <span asp-validation-for="Nome" />
+  </div>
+
+  <div class="form-group">
+    <label asp-for="Cognome"></label>
+    <input type="text" asp-for="Cognome" class="form-control" />
+    <span asp-validation-for="Cognome" />
+  </div>
+
+  <div class="form-group">
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" />
+  </div>
+
+  <div class="form-group">
+    <label asp-for="Città"></label>
+    <input type="text" asp-for="Città" class="form-control" />
+    <span asp-validation-for="Città" />
+  </div>
+
+  <div class="form-group">
+    <div asp-validation-summary="All"></div>
+    <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-send"></i> Send</button>
+  </div>
+
+</form>

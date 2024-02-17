@@ -33,8 +33,9 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Prenotato(Utente u)
     {
-        Utenti.Add( u );
-        return View( Utenti );
+        Database db = new ();
+        db.Utenti.Add( u );
+        return View( db );
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

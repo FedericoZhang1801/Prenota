@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using prenota5H.Models;
+namespace prenota5H.Models;
 
 public class Database : DbContext
 {

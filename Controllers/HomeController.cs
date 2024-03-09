@@ -8,7 +8,6 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    private static List<Utente> Utenti = new List<Utente>();
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -35,6 +34,7 @@ public class HomeController : Controller
     {
         Database db = new ();
         db.Utenti.Add( u );
+        db.SaveChanges();
         return View( db );
     }
 

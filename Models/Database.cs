@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using prenota5H.Models;
 
 public class Database : DbContext
@@ -11,4 +12,5 @@ public class Database : DbContext
              => options.UseSqlite("Data Source=database.db");
 
      public DbSet<Utente> Utenti { get; set; }
+     public string? Nome { get; set; }
 }
